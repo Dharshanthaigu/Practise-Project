@@ -1,38 +1,285 @@
-.App {
-  text-align: center;
+.header{
+  position: absolute;
+    width: 1540px;
+    height: 74px;
+    left: 0px;
+    top: 0px;
+  background: #34C94B;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header_comp{
+  padding-top: 20px;
+    display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.title{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  position: absolute;
+    width: 28px;
+    height: 24px;
+    left: 32px;
+    top: 20px;
+    font-family: 'Font Awesome 6 Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 24px;
+    /* identical to box height, or 86% */
+    letter-spacing: 1px;
+    color: #121212;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logoname{
+  position: absolute;
+    width: 60px;
+    height: 24px;
+    left: 20px;
+    top: 10px; 
+    font-family: 'Avenir Next Condensed';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    /* identical to box height, or 100% */
+    letter-spacing: 1px;
+    color: #FFFFFF;
+}
+
+.searchbox{
+  box-sizing: border-box;
+    position: absolute;
+    width: 568px;
+    height: 48px;
+    left: 436px;
+    top: 13px; 
+    background: #FFFFFF;
+    border: 1px solid #121212;
+    border-radius: 8px;
+}
+
+.search_text{
+    position: absolute;
+    height: 19px;
+    left: 120px;
+    top: 14px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.2px;
+    color: #121212;
+}
+
+.searchicon_box{
+  box-sizing: border-box;
+    position: absolute;
+    width: 66px;
+    height: 47px;
+    left: 510px;
+    background: #FFFFFF;
+    border: 1px solid #121212;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.feedback{
+  box-sizing: border-box;
+  
+    /* Auto layout */
+  
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 16px;
+    gap: 10px;
+    position: absolute;
+    width: 170px;
+    height: 47px;
+    left: 1338px;
+    top: 13px;
+    background: #121212;
+    /* Primary 400 */
+    border: 1px solid #34C94B;
+    border-radius: 12px;
+}
+
+#body{
+  background-color: #121212;
+}
+
+.feedback_button{
+  width: 138px;
+    height: 27px;
+  
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.25px;
+    /* Primary 400 */
+    color: #34C94B;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    background-color: #121212;
+}
+
+.navbar{
+  position: absolute;
+    width: 1540px;
+    height: 170px;
+    left: 0px;
+    top: 8px;
+    background: #121212;
+}
+
+.text1{
+position: absolute;
+  width: 473px;
+  height: 38px;
+  left: 368px;
+  top: 5px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.text2{
+    position: absolute;
+    width: 556px;
+    height: 38px;
+    left: 327px;
+    top: 53px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    /* identical to box height */
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#body{
+  position: absolute;
+    width: 1540px;
+    height: 100%;
+    left: 0px;
+    top: 74px;
+    background-color: #121212;
+}
+
+.card_details{
+  color: #FFFFFF;
+  position: absolute;
+    width: 1480px;
+    height: 30px;
+    left: 6px;
+    top: 161px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.card_title{
+  display: flex;
+  flex-wrap: wraps;
+  justify-content: space-between;
+}
+
+.image{
+  background-image: url("../Images/headphone.png");
+  color: #FFFFFF;
+}
+
+.album_card{
+ position: absolute;
+}
+
+
+
+.cardimage{
+    border: 1px solid white;
+}
+
+
+
+.cardbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 4px 8px;
+    gap: 1px;
+    position: absolute;
+    width: 71px;
+    height: 23px;
+    left: 6px;
+    top: 162px;
+    background: #121212;
+    border-radius: 10px;
+}
+
+.card_button_text{
+    width: 55px;
+    height: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    /* identical to box height */
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.cardtext{
+    padding-top: 200px;
+    width: 105px;
+    height: 19px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #FFFFFF;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+
+.card_data{
+  position: absolute;
+    width: 159px;
+    height: 190px;
+    left: 0px;
+    top: 0px;
+    background: #FFFFFF;
+    border-radius: 10px;
 }
