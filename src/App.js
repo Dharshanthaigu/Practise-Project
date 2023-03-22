@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import { fetchTopAlbum } from "../src/Api";
 import { useEffect } from "react";
+import { StyledEngineProvider } from "@mui/material/styles";
+import AutoComplete from "./components/AutoComplete";
 
 function App() {
   useEffect(() => {
@@ -11,8 +13,11 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Body />
+      <StyledEngineProvider injectFirst>
+        <Header />
+        <Body />
+        {/* <AutoComplete /> */}
+      </StyledEngineProvider>
     </>
   );
 }

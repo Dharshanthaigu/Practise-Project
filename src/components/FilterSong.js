@@ -1,57 +1,43 @@
 import * as React from "react";
-import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
-import Card from "./Card";
+import Box from "@mui/material/Box";
 
-function FilterSong({ albumData }) {
-  const [value, setValue] = React.useState("1");
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
+function FilterSong({ filter, setSelectedFilterIndex, selectedFilterIndex }) {
   const handleChange = (event, newValue) => {
-    setValue(newValue);
+    setSelectedFilterIndex(newValue);
   };
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        typography: "body1",
-      }}
-    >
-      <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-          <TabList
-            onChange={handleChange}
-            style={{
-              backgroundColor: "#121212",
-            }}
-            aria-label="lab API tabs example"
-          >
-            <Tab style={{ color: "#FFFFFF" }} label="All" value="1" />
-            <Tab style={{ color: "#FFFFFF" }} label="Rock" value="2" />
-            <Tab style={{ color: "#FFFFFF" }} label="Pop" value="3" />
-            <Tab style={{ color: "#FFFFFF" }} label="Jazz" value="4" />
-            <Tab style={{ color: "#FFFFFF" }} label="Blues" value="5" />
-          </TabList>
-        </Box>
-        <TabPanel value="1">
-          <Card albumData={albumData} />
-        </TabPanel>
-        <TabPanel value="2">
-          <Card albumData={albumData} />
-        </TabPanel>
-        <TabPanel value="3">
-          <Card albumData={albumData} />
-        </TabPanel>
-        <TabPanel value="4">
-          <Card albumData={albumData} />
-        </TabPanel>
-        <TabPanel value="5">
-          <Card albumData={albumData} />
-        </TabPanel>
-      </TabContext>
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={selectedFilterIndex}
+          onChange={handleChange}
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: "#34C94B",
+            },
+          }}
+          aria-label="basic tabs example"
+        >
+          {filter.map((ele) => (
+            <Tab
+              className="filter_tab"
+              label={ele.label}
+              {...a11yProps(0)}
+              key={ele.id}
+            />
+          ))}
+        </Tabs>
+      </Box>
     </Box>
   );
 }
